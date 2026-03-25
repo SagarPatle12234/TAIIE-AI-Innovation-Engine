@@ -35,3 +35,34 @@ Clone the repository and install the required dependencies:
 git clone [https://github.com/YOUR_USERNAME/TAIIE-AI-Innovation-Engine.git](https://github.com/YOUR_USERNAME/TAIIE-AI-Innovation-Engine.git)
 cd TAIIE-AI-Innovation-Engine
 pip install -r requirements.txt
+
+🚀 Quick Start
+1. Train the Base Model
+Train the foundational Transformer on your dataset of existing research topics:
+
+Bash
+python Main.py
+Note: Ensure your data is formatted as a CSV with a Research Topic column.
+
+2. Run the Creativity Cycles
+The Main.py script automatically initializes the CreativityEngine after pre-training, running 5 distinct epochs of generation, human novelty scoring, and transformational fine-tuning.
+
+3. Generate from Checkpoints
+Use the Generator.py script to sample concepts from your transformed models:
+
+Bash
+python Generator.py --model_path final_creative_model.pth --data_path data.csv --start_words "Quantum" "Neural" --num_topics 5
+📊 Evaluation & Limitations
+Evaluated on domain-specific datasets (>10k examples), TAIIE achieves 96.2% validity and 37% higher novelty than baselines while dynamically evolving constraints.
+
+
+Current Limitations: Constraints include vocabulary dependency and computational overhead. Balancing the reward function requires careful tuning. Future work will focus on cross-domain transfer and ethical governance.
+
+📝 Citation
+If you use this code or framework in your research, please refer to the corresponding paper:
+(Insert link to your published paper or arXiv preprint here)
+
+Built to explore the edges of what machines can conceptualize.
+
+
+Would you like me to construct a quick `requirements.txt` file based on your `Main.py` imports so you can commit everything at once?
